@@ -1,0 +1,34 @@
+{
+  "header": {
+    "home": "Home",
+    "about_me": "About me",
+    "projects": "Projects",
+    "contact": "Contact",
+    "language": "Language"
+  },
+
+  "hero": {
+    "title": "FullStack Developer",
+    "available": "Available to work"
+  },
+
+  "technologies": "Technologies",
+
+  "about_me": {
+    "title": "About me",
+    "presentation": "I'm Dante Orsetti, a full stack web developer from Villa Constitución, Argentina. I'm currently finishing my University Technician degree in Programming at UTN, with a focus on React for the frontend and C# with .NET for the backend. I've built real-world applications — from management systems to REST APIs — and I'm looking for my first professional opportunity to keep growing as a developer. I have an intermediate level of English and enjoy solving real problems with clean, practical code."
+  },
+
+  "projects": {
+    "title": "Projects"
+  },
+
+  "contact": {
+    "title": "Contact",
+    "message": "Have an idea or project in mind? Let's talk."
+  },
+
+  "footer": {
+    "rights": "2026 Portfolio developed by Dante Orsetti. All rights reserved."
+  }
+}

@@ -1,0 +1,24 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 #6af373;
+  }
+  50% {
+    box-shadow: 0 0 0 6px #1a1a2e;
+  }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+h2,
+h3,
+p,
+svg,
+button {
+  transition-property: all;
+  transition-duration: 300ms;
+}

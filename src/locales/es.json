@@ -1,0 +1,34 @@
+{
+  "header": {
+    "home": "Inicio",
+    "about_me": "Sobre mi",
+    "projects": "Proyectos",
+    "contact": "Contacto",
+    "language": "Idioma"
+  },
+
+  "hero": {
+    "title": "Desarrollador FullStack",
+    "available": "Disponible para trabajar"
+  },
+
+  "technologies": "Tecnologías",
+
+  "about_me": {
+    "title": "Sobre mi",
+    "presentation": "Soy Dante Orsetti, desarrollador web full stack de Villa Constitución, Argentina. Estoy terminando la Tecnicatura Universitaria en Programación en la UTN, con foco en React para frontend y C# con .NET para backend. Tengo experiencia construyendo aplicaciones reales — desde sistemas de gestión hasta APIs REST — y estoy buscando mi primera oportunidad profesional para seguir creciendo. Me manejo bien en inglés y me gusta resolver problemas concretos con código limpio."
+  },
+
+  "projects": {
+    "title": "Proyectos"
+  },
+
+  "contact": {
+    "title": "Contacto",
+    "message": "¿Tienes alguna idea o proyecto en mente? Escribime"
+  },
+
+  "footer": {
+    "rights": "2026 Portafolio desarrollado por Dante Orsetti. Todos los derechos reservados."
+  }
+}
