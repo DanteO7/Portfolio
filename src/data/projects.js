@@ -5,7 +5,7 @@ export const projects = [
     technologies: ["React", "C#", ".NET", "PostgreSQL"],
     github: "https://github.com/DanteO7/TrabajoFinalUTN",
     demo: null,
-    img: "/pos.png",
+    img: "/scheduler.png",
   },
 
   {
