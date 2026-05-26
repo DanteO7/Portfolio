@@ -20,7 +20,24 @@
   },
 
   "projects": {
-    "title": "Proyectos"
+    "title": "Proyectos",
+    "all_title": "Todos los Proyectos"
+  },
+
+  "pos": {
+    "title": "Punto de Venta",
+    "description": "Aplicación web para que un negocio gestione su stock, realice ventas y controle ingresos y productos en tiempo real.",
+    "longDescription": "Sistema de punto de venta desarrollado para pequeños negocios con el objetivo de simplificar la administración diaria. La aplicación permite registrar ventas, controlar stock, gestionar productos y métodos de pago, además de visualizar ingresos de forma organizada. También cuenta con autenticación segura, protección CSRF y almacenamiento de imágenes en la nube.",
+    "frontendDescription": "Desarrollé el frontend utilizando React en un entorno Vite, creando una interfaz rápida y dinámica. Utilicé Tailwind CSS para los estilos, Zustand para manejar estados globales y TanStack Query junto con Axios para gestionar las peticiones al backend y la sincronización de datos.",
+    "backendDescription": "El backend fue desarrollado con C# y ASP.NET Core, utilizando Entity Framework Core para el acceso a datos y PostgreSQL como base de datos principal. Implementé autenticación mediante cookies, protección CSRF y almacenamiento de imágenes con Cloudinary."
+  },
+
+  "scheduler": {
+    "title": "Sistema de Gestión de Horarios",
+    "description": "Aplicación SaaS multi-tenant diseñada para gestionar horarios y turnos en negocios donde los clientes o alumnos administran su propia disponibilidad.",
+    "longDescription": "Plataforma multi-tenant desarrollada para negocios que necesitan organizar horarios, turnos o disponibilidad de alumnos y clientes. Cada organización administra sus propios usuarios y horarios de forma independiente dentro de la misma aplicación. El sistema está pensado para facilitar la gestión de disponibilidad, mejorar la organización y centralizar la información de cada negocio.",
+    "frontendDescription": "Desarrollé el frontend utilizando React en un entorno Vite, creando una interfaz rápida y dinámica. Utilicé Tailwind CSS para los estilos, Zustand para manejar estados globales y TanStack Query junto con Axios para gestionar las peticiones al backend y la sincronización de datos.",
+    "backendDescription": "El backend fue desarrollado con C# y ASP.NET Core, utilizando Entity Framework Core para el acceso a datos y PostgreSQL como base de datos principal. La aplicación implementa una arquitectura multi-tenant, autenticación segura y manejo de sesiones para separar la información de cada organización dentro del sistema."
   },
 
   "contact": {

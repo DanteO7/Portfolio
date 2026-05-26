@@ -9,7 +9,7 @@ export default function MainLayout({ children }) {
       <StarsBackground />
       <CloudsBackground />
       <Header className="relative z-10" />
-      <main className="relative z-10 flex flex-col items-center gap-25 min-[900px]:mt-20 min-[900px]:mb-10 p-10">
+      <main className="relative z-10 flex flex-col items-center gap-25 min-[900px]:mt-20 min-[900px]:mb-10 p-10 max-[900px]:pt-6">
         {children}
       </main>
       <Footer className="relative z-10" />

@@ -22,3 +22,9 @@ button {
   transition-property: all;
   transition-duration: 300ms;
 }
+
+@layer base {
+  body {
+    @apply bg-[#90d0ec] dark:bg-[#020617];
+  }
+}

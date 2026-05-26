@@ -11,7 +11,7 @@ export default function CloudsBackground() {
     const ctx = canvas.getContext("2d");
 
     canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.height = document.documentElement.scrollHeight;
 
     let quantity = 8;
     if (canvas.width < 900) {
@@ -20,10 +20,10 @@ export default function CloudsBackground() {
 
     const clouds = Array.from({ length: quantity }, () => ({
       x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
+      y: Math.random() * window.innerHeight,
       radius: Math.random() * 250 + 150,
       opacity: Math.random() * 0.3 + 0.2,
-      speed: Math.random() * 0.3 + 0.5,
+      speed: Math.random() * 0.3 + 0.6,
     }));
 
     let animationId;
@@ -35,7 +35,7 @@ export default function CloudsBackground() {
         0, // círculo interior: centro x, y, radio
         canvas.width / 2,
         0,
-        canvas.height, // círculo exterior: centro x, y, radio
+        window.innerHeight, // círculo exterior: centro x, y, radio
       );
       gradient.addColorStop(0, "#efefef");
       gradient.addColorStop(1, "#73caef");
@@ -63,7 +63,7 @@ export default function CloudsBackground() {
         cloud.x += cloud.speed;
         if (cloud.x - cloud.radius > canvas.width) {
           cloud.x = -cloud.radius;
-          cloud.y = Math.random() * canvas.height;
+          cloud.y = Math.random() * window.innerHeight;
         }
       });
 
@@ -74,7 +74,7 @@ export default function CloudsBackground() {
 
     const handleResize = () => {
       canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      canvas.height = document.documentElement.scrollHeight;
     };
     window.addEventListener("resize", handleResize);
 

@@ -3,6 +3,7 @@ import { useState } from "react";
 import ThemeToggle from "./theme-toggle";
 import LanguageSelect from "./language-select";
 import { useEffect } from "react";
+import { useLocation } from "wouter";
 
 export default function Header() {
   const { t } = useTranslation();
@@ -17,6 +18,39 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const [location, navigate] = useLocation();
+
+  function scrollToSection(id) {
+    setMenu(false);
+
+    if (location !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        if (id === "home") {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+          return;
+        }
+        const element = document.getElementById(id);
+        if (!element) return;
+        const offsetPosition =
+          element.getBoundingClientRect().top + window.pageYOffset - 80;
+        window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+      }, 100);
+      return;
+    }
+
+    if (id === "home") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
+    const element = document.getElementById(id);
+    if (!element) return;
+    const offsetPosition =
+      element.getBoundingClientRect().top + window.pageYOffset - 80;
+    window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+  }
 
   return (
     <>
@@ -44,10 +78,30 @@ export default function Header() {
           <div>Dante</div>
           <nav className="hidden min-[900px]:flex">
             <ul className="flex gap-12">
-              <li>{t("header.home")}</li>
-              <li>{t("header.about_me")}</li>
-              <li>{t("header.projects")}</li>
-              <li>{t("header.contact")}</li>
+              <li
+                className="cursor-pointer transition-all duration-200 hover:text-[#5c91a4]"
+                onClick={() => scrollToSection("home")}
+              >
+                {t("header.home")}
+              </li>
+              <li
+                className="cursor-pointer transition-all duration-200 hover:text-[#5c91a4]"
+                onClick={() => scrollToSection("about")}
+              >
+                {t("header.about_me")}
+              </li>
+              <li
+                className="cursor-pointer transition-all duration-200 hover:text-[#5c91a4]"
+                onClick={() => scrollToSection("projects")}
+              >
+                {t("header.projects")}
+              </li>
+              <li
+                className="cursor-pointer transition-all duration-200 hover:text-[#5c91a4]"
+                onClick={() => scrollToSection("contact")}
+              >
+                {t("header.contact")}
+              </li>
             </ul>
           </nav>
           <div className="flex gap-8">
@@ -82,10 +136,30 @@ export default function Header() {
 
         <nav>
           <ul className="flex flex-col gap-4">
-            <li onClick={() => setMenu(false)}>{t("header.home")}</li>
-            <li onClick={() => setMenu(false)}>{t("header.about_me")}</li>
-            <li onClick={() => setMenu(false)}>{t("header.projects")}</li>
-            <li onClick={() => setMenu(false)}>{t("header.contact")}</li>
+            <li
+              className="cursor-pointer transition-all duration-200 hover:text-[#5c91a4]"
+              onClick={() => scrollToSection("home")}
+            >
+              {t("header.home")}
+            </li>
+            <li
+              className="cursor-pointer transition-all duration-200 hover:text-[#5c91a4]"
+              onClick={() => scrollToSection("about")}
+            >
+              {t("header.about_me")}
+            </li>
+            <li
+              className="cursor-pointer transition-all duration-200 hover:text-[#5c91a4]"
+              onClick={() => scrollToSection("projects")}
+            >
+              {t("header.projects")}
+            </li>
+            <li
+              className="cursor-pointer transition-all duration-200 hover:text-[#5c91a4]"
+              onClick={() => scrollToSection("contact")}
+            >
+              {t("header.contact")}
+            </li>
           </ul>
         </nav>
         <LanguageSelect />

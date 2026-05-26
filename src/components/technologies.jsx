@@ -8,12 +8,20 @@ import {
   SiPostgresql,
 } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";
+import { useReveal } from "../hook/use-reveal";
 
 export default function Technologies() {
+  const { ref, visible, done } = useReveal();
+
   const { t } = useTranslation();
 
   return (
-    <div className="flex flex-col items-center gap-10">
+    <div
+      ref={ref}
+      className={`flex flex-col items-center gap-10 ${
+        visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
+      } ${!done ? "transition-[opacity, transform] duration-700" : ""}`}
+    >
       <div className="flex justify-center items-center w-full gap-8">
         <h2 className="text-5xl">{t("technologies")}</h2>
       </div>

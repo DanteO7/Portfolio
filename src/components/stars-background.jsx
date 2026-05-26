@@ -11,11 +11,11 @@ export default function StarsBackground() {
     const ctx = canvas.getContext("2d");
 
     canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.height = document.documentElement.scrollHeight;
 
     const stars = Array.from({ length: 160 }, () => ({
       x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
+      y: Math.random() * window.innerHeight,
       radius: Math.random() * 2 + 0.5,
       opacity: Math.random(),
       speed: Math.random() * 0.3 + 0.05,
@@ -30,7 +30,7 @@ export default function StarsBackground() {
         0, // círculo interior: centro x, y, radio
         canvas.width / 2,
         0,
-        canvas.height, // círculo exterior: centro x, y, radio
+        window.innerHeight, // círculo exterior: centro x, y, radio
       );
       gradient.addColorStop(0, "#1e293b");
       gradient.addColorStop(1, "#020617");
@@ -45,7 +45,7 @@ export default function StarsBackground() {
 
         star.y -= star.speed;
         if (star.y < 0) {
-          star.y = canvas.height;
+          star.y = window.innerHeight;
           star.x = Math.random() * canvas.width;
         }
       });
@@ -57,7 +57,7 @@ export default function StarsBackground() {
 
     const handleResize = () => {
       canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      canvas.height = document.documentElement.scrollHeight;
     };
     window.addEventListener("resize", handleResize);
 

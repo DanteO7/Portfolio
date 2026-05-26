@@ -20,7 +20,24 @@
   },
 
   "projects": {
-    "title": "Projects"
+    "title": "Projects",
+    "all_title": "All Projects"
+  },
+
+  "pos": {
+    "title": "Point of Sale",
+    "description": "Web application for businesses to manage inventory, process sales, and track income and stock in real time.",
+    "longDescription": "Point of sale system developed for small businesses with the goal of simplifying daily management. The application allows sales registration, stock control, product and payment method management, as well as organized income tracking. It also includes secure authentication, CSRF protection, and cloud image storage.",
+    "frontendDescription": "I developed the frontend using React in a Vite environment, creating a fast and dynamic interface. I used Tailwind CSS for styling, Zustand for global state management, and TanStack Query together with Axios to handle backend requests and data synchronization.",
+    "backendDescription": "The backend was developed with C# and ASP.NET Core, using Entity Framework Core for database access and PostgreSQL as the main database. I implemented cookie-based authentication, CSRF protection, and image storage with Cloudinary."
+  },
+
+  "scheduler": {
+    "title": "Scheduling Platform",
+    "description": "Multi-tenant SaaS application designed to manage schedules and appointments for businesses where clients or students organize their own availability.",
+    "longDescription": "Multi-tenant platform developed for businesses that need to organize schedules, appointments, or client and student availability. Each organization manages its own users and schedules independently within the same application. The system is designed to simplify availability management, improve organization, and centralize business information.",
+    "frontendDescription": "I developed the frontend using React in a Vite environment, creating a fast and dynamic interface. I used Tailwind CSS for styling, Zustand for global state management, and TanStack Query together with Axios to handle backend requests and data synchronization.",
+    "backendDescription": "The backend was developed with C# and ASP.NET Core, using Entity Framework Core for database access and PostgreSQL as the main database. The application implements a multi-tenant architecture, secure authentication, and session management to separate each organization's data within the system."
   },
 
   "contact": {
