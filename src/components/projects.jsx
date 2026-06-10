@@ -25,7 +25,7 @@ export default function Projects() {
         ))}
       </div>
       <Link href="/projects">
-        <Button text="Ver todos los proyectos" />
+        <Button text={t("extras.seeAllProjects")} />
       </Link>
     </div>
   );

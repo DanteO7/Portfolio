@@ -21,7 +21,7 @@ export default function Contact() {
         {t("contact.message")}
       </h3>
       <Button
-        text="Mandar correo"
+        text={t("extras.sendEmail")}
         img={<RiMailSendLine className="text-[30px]" />}
         onClick={() =>
           window.open(

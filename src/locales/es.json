@@ -28,6 +28,7 @@
     "title": "Punto de Venta",
     "description": "Aplicación web para que un negocio gestione su stock, realice ventas y controle ingresos y productos en tiempo real.",
     "longDescription": "Sistema de punto de venta desarrollado para pequeños negocios con el objetivo de simplificar la administración diaria. La aplicación permite registrar ventas, controlar stock, gestionar productos y métodos de pago, además de visualizar ingresos de forma organizada. También cuenta con autenticación segura, protección CSRF y almacenamiento de imágenes en la nube.",
+    "roleDescription": "En este proyecto me desempeñé como desarrollador Full Stack, participando en todas las etapas del desarrollo, desde el análisis de requerimientos y diseño del sistema hasta la implementación y el despliegue. Me encargué del desarrollo de funcionalidades tanto en el frontend como en el backend, el diseño de la base de datos, la implementación de la lógica de negocio, la creación de interfaces de usuario, la integración de servicios externos y la realización de pruebas para asegurar una solución robusta y mantenible.",
     "frontendDescription": "Desarrollé el frontend utilizando React en un entorno Vite, creando una interfaz rápida y dinámica. Utilicé Tailwind CSS para los estilos, Zustand para manejar estados globales y TanStack Query junto con Axios para gestionar las peticiones al backend y la sincronización de datos.",
     "backendDescription": "El backend fue desarrollado con C# y ASP.NET Core, utilizando Entity Framework Core para el acceso a datos y PostgreSQL como base de datos principal. Implementé autenticación mediante cookies, protección CSRF y almacenamiento de imágenes con Cloudinary."
   },
@@ -47,5 +48,14 @@
 
   "footer": {
     "rights": "2026 Portafolio desarrollado por Dante Orsetti. Todos los derechos reservados."
+  },
+
+  "extras": {
+    "inProgress": "(En progreso)",
+    "seeMore": "Ver mas",
+    "seeAllProjects": "Ver todos los proyectos",
+    "sendEmail": "Mandar correo",
+    "images": "Imágenes",
+    "demo": "Demo disponible"
   }
 }

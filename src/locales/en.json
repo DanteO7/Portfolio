@@ -28,6 +28,7 @@
     "title": "Point of Sale",
     "description": "Web application for businesses to manage inventory, process sales, and track income and stock in real time.",
     "longDescription": "Point of sale system developed for small businesses with the goal of simplifying daily management. The application allows sales registration, stock control, product and payment method management, as well as organized income tracking. It also includes secure authentication, CSRF protection, and cloud image storage.",
+    "roleDescription": "As a Full Stack Developer, I was involved in every stage of the project's development, from requirements gathering and system design to implementation and deployment. My responsibilities included developing frontend and backend features, designing the database structure, implementing business logic, creating user interfaces, integrating external services, and testing the application to ensure a reliable and maintainable solution.",
     "frontendDescription": "I developed the frontend using React in a Vite environment, creating a fast and dynamic interface. I used Tailwind CSS for styling, Zustand for global state management, and TanStack Query together with Axios to handle backend requests and data synchronization.",
     "backendDescription": "The backend was developed with C# and ASP.NET Core, using Entity Framework Core for database access and PostgreSQL as the main database. I implemented cookie-based authentication, CSRF protection, and image storage with Cloudinary."
   },
@@ -47,5 +48,14 @@
 
   "footer": {
     "rights": "2026 Portfolio developed by Dante Orsetti. All rights reserved."
+  },
+
+  "extras": {
+    "inProgress": "(In progress)",
+    "seeMore": "See more",
+    "seeAllProjects": "See all projects",
+    "sendEmail": "Send email",
+    "images": "Images",
+    "demo": "Demo available"
   }
 }

@@ -75,7 +75,9 @@ export default function Header() {
             </button>
           </div>
 
-          <div>Dante</div>
+          <div>
+            <img className="w-24" src="/logo.png" alt="logo de Dante" />
+          </div>
           <nav className="hidden min-[900px]:flex">
             <ul className="flex gap-12">
               <li
