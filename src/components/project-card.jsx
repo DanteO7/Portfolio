@@ -1,12 +1,20 @@
 import { useTranslation } from "react-i18next";
 import Button from "./button";
 import { FaGithub } from "react-icons/fa6";
+import { useReveal } from "../hook/use-reveal";
 
 export default function ProjectCard({ project }) {
   const { t } = useTranslation();
 
+  const { ref, visible, done } = useReveal();
+
   return (
-    <div>
+    <div
+      ref={ref}
+      className={` ${
+        visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
+      } ${!done ? "transition-[opacity, transform] duration-700" : ""}`}
+    >
       <div className="w-full border shadow-md dark:shadow-white/20 rounded-4xl text-sm min-[900px]:text-[19px] flex flex-col items-center h-full">
         {project.img && (
           <img
@@ -15,7 +23,7 @@ export default function ProjectCard({ project }) {
             className="w-full rounded-t-4xl"
           />
         )}
-        <div className="p-[10%] min-[900px]:p-10 min-[900px]:pt-7 flex flex-col gap-3 min-[900px]:gap-5 justify-between h-full w-full">
+        <div className="p-[10%] min-[700px]:p-10 min-[900px]:pt-7 flex flex-col gap-3 min-[900px]:gap-5 justify-between h-full w-full">
           <div className="flex gap-4">
             {project.technologies.map((t) => (
               <span key={t}>{t}</span>
@@ -25,7 +33,7 @@ export default function ProjectCard({ project }) {
             {t(`${project.key}.title`)}
           </h2>
           <p>{t(`${project.key}.description`)}</p>
-          <div className="flex flex-col  gap-2 min-[1200px]:flex-row ">
+          <div className="grid grid-cols-2 gap-2 min-[900px]:gap-8">
             <Button
               text={
                 project?.inProgress
@@ -39,7 +47,9 @@ export default function ProjectCard({ project }) {
               <Button
                 onClick={() => window.open(project.github, "_blank")}
                 text="Github"
-                img={<FaGithub className="text-[30px]" />}
+                img={
+                  <FaGithub className="min-[900px]:text-[30px] text-[16px]" />
+                }
               />
             )}
           </div>

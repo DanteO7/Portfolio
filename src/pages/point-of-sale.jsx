@@ -17,14 +17,17 @@ export default function PointOfSale() {
   return (
     <MainLayout>
       <div className="flex flex-col gap-14 items-center">
-        <h1 className="text-[34px] font-semibold min-[900px]:text-5xl">
-          {t("pos.title")}
-        </h1>
-        <div className="font-semibold flex gap-6 min-[900px]:text-xl flex-wrap justify-center">
-          {project.technologies.map((t) => (
-            <span key={t}>{t}</span>
-          ))}
+        <div className="flex flex-col gap-3">
+          <h1 className="text-[34px] font-semibold min-[900px]:text-5xl">
+            {t("pos.title")}
+          </h1>
+          <div className="font-semibold flex gap-5 min-[900px]:text-xl flex-wrap justify-center">
+            {project.technologies.map((t) => (
+              <span key={t}>{t}</span>
+            ))}
+          </div>
         </div>
+        <Carrousel project={project} />
         <div className="flex flex-col gap-8 min-[900px]:w-[75%]">
           <p className="">{t("pos.longDescription")}</p>
           <p className="">{t("pos.roleDescription")}</p>
@@ -46,7 +49,6 @@ export default function PointOfSale() {
             />
           )}
         </div>
-        <Carrousel project={project} />
       </div>
     </MainLayout>
   );

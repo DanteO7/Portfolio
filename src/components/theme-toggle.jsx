@@ -23,7 +23,7 @@ export default function ThemeToggle() {
           absolute z-0 inset-0 transition-all duration-500
           ${
             isDark
-              ? "bg-[radial-gradient(circle_at_top,#0b1026,#131934)]"
+              ? "bg-[radial-gradient(circle_at_top,#21213a,#131934)]"
               : "bg-[radial-gradient(circle_at_top,#ace1f6,#c6e7f9)]"
           }
         `}

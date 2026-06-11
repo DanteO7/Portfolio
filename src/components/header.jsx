@@ -34,7 +34,7 @@ export default function Header() {
         const element = document.getElementById(id);
         if (!element) return;
         const offsetPosition =
-          element.getBoundingClientRect().top + window.pageYOffset - 80;
+          element.getBoundingClientRect().top + window.pageYOffset - 100;
         window.scrollTo({ top: offsetPosition, behavior: "smooth" });
       }, 100);
       return;
@@ -48,7 +48,7 @@ export default function Header() {
     const element = document.getElementById(id);
     if (!element) return;
     const offsetPosition =
-      element.getBoundingClientRect().top + window.pageYOffset - 80;
+      element.getBoundingClientRect().top + window.pageYOffset - 100;
     window.scrollTo({ top: offsetPosition, behavior: "smooth" });
   }
 
@@ -69,14 +69,19 @@ export default function Header() {
                 setMenu(true);
               }}
             >
-              <span className="w-6 h-0.75 rounded-4xl bg-black dark:bg-white"></span>
-              <span className="w-6 h-0.75 rounded-4xl bg-black dark:bg-white"></span>
-              <span className="w-6 h-0.75 rounded-4xl bg-black dark:bg-white"></span>
+              <span className="w-6 h-0.75 rounded-[35px] bg-black dark:bg-white"></span>
+              <span className="w-6 h-0.75 rounded-[35px] bg-black dark:bg-white"></span>
+              <span className="w-6 h-0.75 rounded-[35px] bg-black dark:bg-white"></span>
             </button>
           </div>
 
           <div>
-            <img className="w-24" src="/logo.png" alt="logo de Dante" />
+            <img
+              onClick={() => scrollToSection("home")}
+              className="w-24 cursor-pointer"
+              src="/logo.png"
+              alt="logo de Dante"
+            />
           </div>
           <nav className="hidden min-[900px]:flex">
             <ul className="flex gap-12">
