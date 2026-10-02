@@ -130,7 +130,7 @@ export default function Header() {
       />
 
       <div
-        className={`fixed top-0 left-0 z-50 h-full w-64 bg-[#6acaf3] dark:bg-[#0D1425] flex flex-col p-6 gap-6 transition-transform duration-300 ease-in-out min-[900px]:hidden ${
+        className={`fixed top-0 left-0 z-50 h-full w-64 bg-[#8dd4f3] dark:bg-[#0D1425] flex flex-col p-6 gap-6 transition-transform duration-300 ease-in-out min-[900px]:hidden ${
           menu ? "translate-x-0" : "-translate-x-full"
         }`}
       >
