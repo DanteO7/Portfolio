@@ -23,7 +23,7 @@ export default function Technologies() {
       } ${!done ? "transition-[opacity, transform] duration-700" : ""}`}
     >
       <div className="flex justify-center items-center w-full gap-8">
-        <h2 className="text-5xl">{t("technologies")}</h2>
+        <h2 className="text-5xl font-semibold">{t("technologies")}</h2>
       </div>
       <div className="flex flex-wrap justify-center gap-8 min-[900px]:gap-13 text-5xl">
         <div title="React">

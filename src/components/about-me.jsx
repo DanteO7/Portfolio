@@ -14,7 +14,7 @@ export default function AboutMe() {
         visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
       } ${!done ? "transition-[opacity, transform] duration-700" : ""}`}
     >
-      <h2 className="text-5xl">{t("about_me.title")}</h2>
+      <h2 className="text-5xl font-semibold">{t("about_me.title")}</h2>
       <div className="border shadow-md dark:shadow-white/20 rounded-4xl p-[10%] text-sm min-[900px]:text-[19px] min-[900px]:p-17 flex flex-col items-center gap-7">
         <img
           src="/perfil.jpeg"

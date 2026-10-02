@@ -12,11 +12,11 @@ export default function Contact() {
     <div
       id="contact"
       ref={ref}
-      className={`flex flex-col w-full items-center gap-8 min-[900px]:w-[70%] max-w-[900px] ${
+      className={`flex flex-col w-full items-center gap-8 min-[900px]:w-[70%] max-w-225 ${
         visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
       } ${!done ? "transition-[opacity, transform] duration-700" : ""}`}
     >
-      <h2 className="text-5xl">{t("contact.title")}</h2>
+      <h2 className="text-5xl font-semibold">{t("contact.title")}</h2>
       <h3 className="text-4xl font-semibold min-[900px]:text-6xl text-center">
         {t("contact.message")}
       </h3>

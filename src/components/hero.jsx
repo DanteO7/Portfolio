@@ -27,7 +27,7 @@ export default function Hero() {
             {t("hero.title")}
           </h2>
         </div>
-        <div className="flex flex-col min-[900px]:flex-row gap-4">
+        <div className="flex flex-col min-[400px]:flex-row gap-4">
           <Button
             onClick={() => window.open("https://github.com/DanteO7", "_blank")}
             text="Github"

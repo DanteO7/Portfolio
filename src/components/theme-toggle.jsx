@@ -14,7 +14,7 @@ export default function ThemeToggle() {
         relative flex items-center
         w-20 h-10 rounded-full
         px-1 pl-2 transition-all duration-500
-        cursor-pointer overflow-hidden
+        cursor-pointer overflow-hidden border
         ${isDark ? "bg-zinc-800" : "bg-[#ace1f6]"}
       `}
     >

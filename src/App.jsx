@@ -5,7 +5,7 @@ import Home from "./pages/home";
 import ProjectsPage from "./pages/projects-page";
 import { Switch } from "wouter";
 import { Route } from "wouter";
-import PointOfSale from "./pages/point-of-sale";
+import PointOfSale from "./pages/proyects/point-of-sale";
 
 export default function App() {
   const { language, theme } = usePreferencesStore();

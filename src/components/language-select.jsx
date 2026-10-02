@@ -28,22 +28,22 @@ export default function LanguageSelect() {
             e.stopPropagation();
             setOpen(!open);
           }}
-          className="cursor-pointer px-3 py-2 rounded-xl bg-[#c6e7f9] dark:bg-[#21213a]"
+          className="cursor-pointer px-3 py-2 rounded-xl bg-[#c6e7f9] dark:bg-[#141c30] border"
         >
-          {language.toUpperCase()}
+          {language === "es" ? "Español" : "English"}
         </button>
       </div>
 
       {open && (
-        <div className="absolute z-50 -right-3 rounded-lg overflow-hidden bg-[#c6e7f9] dark:bg-[#21213a] shadow-lg">
+        <div className="absolute z-50 -right-3 rounded-lg overflow-hidden bg-[#c6e7f9] dark:bg-[#141c30] shadow-lg border">
           <button
             onClick={() => {
               setLanguage("es");
               setOpen(false);
             }}
-            className="block cursor-pointer px-4 w-full py-2 hover:bg-[#ace1f6] dark:hover:bg-[#131934]"
+            className="block cursor-pointer px-4 w-full py-2 hover:bg-[#ace1f6] dark:hover:bg-[#121a2e]"
           >
-            ES
+            Español
           </button>
           <button
             onClick={() => {
@@ -52,7 +52,7 @@ export default function LanguageSelect() {
             }}
             className="block cursor-pointer px-4 py-2 hover:bg-[#ace1f6] dark:hover:bg-[#131934]"
           >
-            EN
+            English
           </button>
         </div>
       )}

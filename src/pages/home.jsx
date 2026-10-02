@@ -6,11 +6,20 @@ import PageTransition from "../components/page-transition";
 import Projects from "../components/projects";
 import Technologies from "../components/technologies";
 import MainLayout from "../layout/main-layout";
+import { useLocation } from "wouter";
 
 export default function Home() {
+  const [location] = useLocation();
+
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
+    if (location !== "/") return;
+
+    const frame = requestAnimationFrame(() => {
+      window.scrollTo({ top: 0, behavior: "instant" });
+    });
+
+    return () => cancelAnimationFrame(frame);
+  }, [location]);
 
   return (
     <PageTransition>

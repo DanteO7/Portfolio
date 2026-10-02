@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
-import MainLayout from "../layout/main-layout";
-import { projects } from "../data/projects";
-import Carrousel from "../components/carrousel";
-import Button from "../components/button";
+import MainLayout from "../../layout/main-layout";
+import { projects } from "../../data/projects";
+import Carrousel from "../../components/carrousel";
+import Button from "../../components/button";
 import { FaGithub } from "react-icons/fa";
 import { useEffect } from "react";
 

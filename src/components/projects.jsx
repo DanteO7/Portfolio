@@ -19,7 +19,7 @@ export default function Projects() {
     >
       <h2
         ref={ref}
-        className={`text-5xl ${
+        className={`text-5xl font-semibold ${
           visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
         } ${!done ? "transition-[opacity, transform] duration-700" : ""}`}
       >

@@ -7,6 +7,7 @@ export const projects = [
     demo: null,
     img: ["/scheduler.png"],
     inProgress: true,
+    url: "https://turnofacilapp.com.ar",
   },
 
   {

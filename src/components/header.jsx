@@ -130,7 +130,7 @@ export default function Header() {
       />
 
       <div
-        className={`fixed top-0 left-0 z-50 h-full w-64 bg-[#6acaf3] dark:bg-[#1a1a2e] flex flex-col p-6 gap-6 transition-transform duration-300 ease-in-out min-[900px]:hidden ${
+        className={`fixed top-0 left-0 z-50 h-full w-64 bg-[#6acaf3] dark:bg-[#0D1425] flex flex-col p-6 gap-6 transition-transform duration-300 ease-in-out min-[900px]:hidden ${
           menu ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -142,7 +142,7 @@ export default function Header() {
         </button>
 
         <nav>
-          <ul className="flex flex-col gap-4">
+          <ul className="flex flex-col gap-8 pl-5 pt-5 text-[17px]">
             <li
               className="cursor-pointer transition-all duration-200 hover:text-[#5c91a4]"
               onClick={() => scrollToSection("home")}
@@ -167,9 +167,9 @@ export default function Header() {
             >
               {t("header.contact")}
             </li>
+            <LanguageSelect />
           </ul>
         </nav>
-        <LanguageSelect />
       </div>
     </>
   );

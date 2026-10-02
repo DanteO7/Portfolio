@@ -15,12 +15,12 @@ export default function ProjectCard({ project }) {
         visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
       } ${!done ? "transition-[opacity, transform] duration-700" : ""}`}
     >
-      <div className="w-full border shadow-md dark:shadow-white/20 rounded-4xl text-sm min-[900px]:text-[19px] flex flex-col items-center h-full">
+      <div className="w-full border shadow-md dark:shadow-white/20 min-[400px]:rounded-4xl rounded-3xl text-sm min-[900px]:text-[19px] flex flex-col items-center h-full">
         {project.img && (
           <img
             src={project.img[0]}
             alt={t(`${project.key}.title`)}
-            className="w-full rounded-t-4xl"
+            className="w-full  min-[400px]:rounded-t-4xl rounded-t-3xl"
           />
         )}
         <div className="p-[10%] min-[700px]:p-10 min-[900px]:pt-7 flex flex-col gap-3 min-[900px]:gap-5 justify-between h-full w-full">
@@ -33,25 +33,38 @@ export default function ProjectCard({ project }) {
             {t(`${project.key}.title`)}
           </h2>
           <p>{t(`${project.key}.description`)}</p>
-          <div className="grid grid-cols-2 gap-2 min-[900px]:gap-8">
+          <div className="hidden min-[400px]:grid grid-cols-2 gap-2 min-[900px]:gap-8">
             <Button
-              text={
-                project?.inProgress
-                  ? t("extras.inProgress")
-                  : t("extras.seeMore")
-              }
+              text={t("extras.seeMore")}
               href={`/projects/${project.id}`}
               isLink={!project.inProgress}
+              onClick={() => {
+                if (project?.inProgress && project?.url) {
+                  window.open(project.url, "_blank", "noopener,noreferrer");
+                }
+              }}
             />
             {project.github && (
               <Button
                 onClick={() => window.open(project.github, "_blank")}
                 text="Github"
                 img={
-                  <FaGithub className="min-[900px]:text-[30px] text-[16px]" />
+                  <FaGithub className="min-[900px]:text-[30px] text-[20px]" />
                 }
               />
             )}
+          </div>
+          <div className="min-[400px]:hidden">
+            <Button
+              text={t("extras.seeMore")}
+              href={`/projects/${project.id}`}
+              isLink={!project.inProgress}
+              onClick={() => {
+                if (project?.inProgress && project?.url) {
+                  window.open(project.url, "_blank", "noopener,noreferrer");
+                }
+              }}
+            />
           </div>
         </div>
       </div>
